@@ -11,7 +11,7 @@ import javax.persistence.Id;
 
 @Entity
 @Getter @Setter @AllArgsConstructor @NoArgsConstructor
-public class Postcode__Name {
+public class PostcodeName {
     @Id
     @GeneratedValue
     private long id;
