@@ -1,7 +1,5 @@
 package dev.liam.postcodesandnames.controllers;
 
-
-import dev.liam.postcodesandnames.models.PostcodeName;
 import dev.liam.postcodesandnames.models.dataTransferObjects.NameGetResponse;
 import dev.liam.postcodesandnames.services.PostcodeNameService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +7,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 

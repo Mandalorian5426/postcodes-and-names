@@ -24,14 +24,12 @@ public class PostcodeNameService {
      *
      * @param startPostcode the smallest postcode
      * @param endPostcode the largest postcode
-     * @return list of unique names sorted alphabetically
+     * @return Supplier providing a list of names
      */
     public Supplier<Stream<String>> getAllNamesWithinPostcodeRange(int startPostcode, int endPostcode) {
         return () -> this.getAll().stream()
             .filter(postcode__name -> postcode__name.withinPostCodeRange(startPostcode, endPostcode))
-            .map(PostcodeName::getName)
-            .distinct()
-            .sorted();
+            .map(PostcodeName::getName);
     }
 
     public List<PostcodeName> insert(PostcodeName[] entities) {
